@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    margin: 0 auto;
+    font-family: sans-serif;
+    color:#FFFFFF;
+    width: 100%;
+}
+img{
+    max-width:100%;
+}
+
+.carousel-slide{
+   
+   background-size: cover;
+   background-position: center;
+   }
+     
+   .carousel-dots{
+       bottom:0;
+       top: 50%;
+       transform: translateY(-50%);
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       right: 10px;
+       width: auto;
+   }
+   .carousel-dots li button::before{
+       content:'';
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       width: 10px;
+       height: 10px;
+       border: 1px solid black;
+       border-radius: 50%;
+   }
+   
+   
+     .carousel-dots li.slick-active button::before{
+       background-color: orange;    
+       }
+   
+    
+       input[type="range"]{
+           -webkit-appearance: none;
+           width: 59%;
+           left: 20%;
+           top: 96%;
+           display: inline-block;
+           height: 10px;
+           position:absolute;
+           background: #d1eaff;
+           outline: none;
+           
+       }
+   input[type="range"]::-webkit-slider-runnable-track  {
+    -webkit-appearance: none;  
+    height: 10px; 
+    background-color: transparent;
+    -webkit-transition: .2s;
+    z-index:1;
+    transition: opacity .2s;
+}
+
+   input[type="range"]::-webkit-slider-thumb {
+   -webkit-appearance: none;
+   width: 44px;
+   height: 56px;
+   transform: translateY(-40%); 
+   background: url('images/ref_shape.png'); 
+    z-index:11; 
+    cursor: pointer; 
+}
+
+   input[type="range"]::-moz-range-thumb {
+     -webkit-appearance: none;
+     width: 44px;
+     height: 56px;
+     transform: translateY(-40%);
+     background: url('images/ref_shape.png'); 
+     z-index:11; 
+     cursor: pointer; 
+   }
+   
+
+.ringring {
+    border: 3px solid #cc764c;
+    -webkit-border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 56%;
+    top: 12%;
+    display: inline-block;
+    -webkit-animation: pulsate 1s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.0;
+    z-index:1000;
+          
+}
+ @-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}  
